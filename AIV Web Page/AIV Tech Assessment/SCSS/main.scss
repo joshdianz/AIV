@@ -1,0 +1,26 @@
+$primary-color: black;
+$accent-color: orange;
+$text-color: #fff;
+$font-weights: (
+    //keys
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+);
+
+body{
+    background: $primary-color;
+    color: $text-color;
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+
+    #{&}_paragraph{
+        font-weight: map-get($font-weights, bold);
+
+        &:hover{
+            color: pink;
+        }
+    }
+}
